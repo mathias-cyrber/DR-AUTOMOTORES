@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DRAUTOMOTORES</title>
+  <link rel="shortcut icon" href="img/logo1.jpg" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <nav class="menu">
+    <div class="menu-hamburguesa" id="btn-menu">&#9776;</div>
+    <ul id="menu-lista">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#mecanica">Servicios disponibles</a></li>
+    </ul>
+  </nav>
+
+  <div class="contenedor">
+    <div class="nombre">
+      <h1>Dr.automotores</h1>
+      <img class="logo" src="img/logo2.jpg" alt="logo" />
+    </div>
+
+    <br /><br />
+
+    <div class="servi" id="servicios"><h1>Servicios</h1></div>
+
+    <section class="container">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img id="slide-1" src="img/anun1.jpg" alt="Anuncio 1" />
+          <img id="slide-2" src="img/anun2.jpg" alt="Anuncio 2" />
+          <img id="slide-3" src="img/anun3.jpg" alt="Anuncio 3" />
+          <img id="slide-4" src="img/helado.jpg" alt="Anuncio 4" />
+        </div>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+          <a href="#slide-4"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mecanica">
+      <div class="ser"><h1>Servicios disponibles</h1></div>
+      <div class="disponible">
+
+        <!-- Mantenimiento de vehículos -->
+        <div class="mantenimiento-de-veiculos" id="mantenimiento">
+          <p>• Mantenimiento de vehículos</p>
+          <img class="mt" src="img/mt.jpg" alt="Mantenimiento de vehículos" />
+          <h3>Mantenimiento de vehículos:</h3>
+          <p>El mantenimiento de vehículos es cuidar tu auto regularmente para que funcione bien, sea seguro y dure más. Es clave para evitar problemas mayores.</p>
+          <h3>¿Qué implica?</h3>
+          <ul>
+            <li>Preventivo: Hacer revisiones y cambios programados (aceite, filtros, frenos, neumáticos, líquidos).</li>
+            <li>Correctivo: Arreglar lo que ya se rompió.</li>
+          </ul>
+          <p><strong>¿Por qué es vital?</strong></p>
+          <ul>
+            <li>Seguridad: Reduce accidentes por fallas.</li>
+            <li>Ahorro: Prevenir es más barato que reparar.</li>
+            <li>Vida útil: Tu auto te durará más años.</li>
+            <li>Rendimiento: Funciona mejor y gasta menos combustible.</li>
+          </ul>
+        </div>
+
+        <!-- Mecánica ligera -->
+        <div class="mecanica-ligera">
+          <p>• Mecánica ligera</p>
+          <img src="img/ligera.jpg" alt="Mecánica ligera" />
+          <h3>Mecánica Ligera:</h3>
+          <p>La mecánica ligera se ocupa del mantenimiento y reparación de los componentes más comunes y de desgaste diario de un coche.</p>
+          <h3>¿Qué incluye?</h3>
+          <ul>
+            <li>Frenos, suspensión, focos, aceite, batería, neumáticos, refrigeración, etc.</li>
+          </ul>
+        </div>
+
+        <!-- Tren delantero -->
+        <div class="tren-delantero" id="tren">
+          <p>• Tren delantero</p>
+          <img class="tren" src="img/tren.jpg" alt="Tren delantero" />
+          <h3>Tren Delantero:</h3>
+          <p>El tren delantero es la parte frontal del auto que te permite dirigir, amortiguar y frenar. Es vital para tu seguridad.</p>
+          <h3>¿Qué incluye?</h3>
+          <ul>
+            <li>Dirección, suspensión, frenos, transmisión delantera.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <div style="text-align:center; margin: 40px 0;">
+      <button id="btn-agregar" style="padding:10px 20px; font-size:18px;">+ Más</button>
+    </div>
+
+    <div id="formulario-agregar" style="display:none; text-align:center; color:white;">
+      <h2>Agregar nuevo servicio</h2>
+      <input type="text" id="nombreUsuario" placeholder="Usuario" /><br><br>
+      <input type="password" id="claveUsuario" placeholder="Contraseña" /><br><br>
+      <button id="verificar">Verificar</button>
+
+      <div id="formulario-imagen" style="display:none; margin-top:20px;">
+        <input type="file" id="imagen" accept="image/*" /><br><br>
+        <textarea id="descripcion" placeholder="Descripción del servicio" rows="4" cols="40"></textarea><br><br>
+        <button id="agregarServicio">Agregar Servicio</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
