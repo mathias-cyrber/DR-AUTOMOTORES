@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DR AUTOMOTORES</title>
+  <link rel="shortcut icon" href="img/logo1.jpg" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyB9F_-_Wbb3MwV3mKO_1-s_H7ZHhpL7jrk",
+    authDomain: "dr-automotores-bcf6c.firebaseapp.com",
+    projectId: "dr-automotores-bcf6c",
+    storageBucket: "dr-automotores-bcf6c.firebasestorage.app",
+    messagingSenderId: "709679327023",
+    appId: "1:709679327023:web:394250d0fd7f848b1023da",
+    measurementId: "G-NDH2F4KJ44"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+  
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <nav class="menu">
+    <div class="menu-hamburguesa" id="btn-menu">&#9776;</div>
+    <ul id="menu-lista">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#mecanica">Servicios disponibles</a></li>
+    </ul>
+  </nav>
+
+  <div class="contenedor">
+    <div class="nombre">
+      <h1>Dr.automotores</h1>
+      <img class="logo" src="img/logo2.jpg" alt="logo" />
+    </div>
+
+    <br /><br />
+
+    <div class="servi" id="servicios"><h1>Servicios</h1></div>
+
+    <section class="container">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img id="slide-1" src="img/anun1.jpg" alt="Anuncio 1" />
+          <img id="slide-2" src="img/anun2.jpg" alt="Anuncio 2" />
+          <img id="slide-3" src="img/anun3.jpg" alt="Anuncio 3" />
+          <img id="slide-4" src="img/helado.jpg" alt="Anuncio 4" />
+        </div>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+          <a href="#slide-4"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mecanica">
+      <div class="ser"><h1>Servicios disponibles</h1></div>
+      <div class="disponible">
+
+        <!-- Mantenimiento de vehículos -->
+        <div class="mantenimiento-de-veiculos" id="mantenimiento">
+          <p>• Mantenimiento de vehículos</p>
+          <img class="mt" src="img/mt.jpg" alt="Mantenimiento de vehículos" />
+          <h3>Mantenimiento de vehículos:</h3>
+          <p>El mantenimiento de vehículos es cuidar tu auto regularmente para que funcione bien, sea seguro y dure más. Es clave para evitar problemas mayores.</p>
+          <h3>¿Qué implica?</h3>
+          <ul>
+            <li>Preventivo: Hacer revisiones y cambios programados (aceite, filtros, frenos, neumáticos, líquidos).</li>
+            <li>Correctivo: Arreglar lo que ya se rompió.</li>
+          </ul>
+          <p><strong>¿Por qué es vital?</strong></p>
+          <ul>
+            <li>Seguridad: Reduce accidentes por fallas.</li>
+            <li>Ahorro: Prevenir es más barato que reparar.</li>
+            <li>Vida útil: Tu auto te durará más años.</li>
+            <li>Rendimiento: Funciona mejor y gasta menos combustible.</li>
+          </ul>
+        </div>
+
+        <!-- Mecánica ligera -->
+        <div class="mecanica-ligera">
+          <p>• Mecánica ligera</p>
+          <img src="img/ligera.jpg" alt="Mecánica ligera" />
+          <h3>Mecánica Ligera:</h3>
+          <p>La mecánica ligera se ocupa del mantenimiento y reparación de los componentes más comunes y de desgaste diario de un coche.</p>
+          <h3>¿Qué incluye?</h3>
+          <ul>
+            <li>Frenos, suspensión, focos, aceite, batería, neumáticos, refrigeración, etc.</li>
+          </ul>
+        </div>
+
+        <!-- Tren delantero -->
+        <div class="tren-delantero" id="tren">
+          <p>• Tren delantero</p>
+          <img class="tren" src="img/tren.jpg" alt="Tren delantero" />
+          <h3>Tren Delantero:</h3>
+          <p>El tren delantero es la parte frontal del auto que te permite dirigir, amortiguar y frenar. Es vital para tu seguridad.</p>
+          <h3>¿Qué incluye?</h3>
+          <ul>
+            <li>Dirección, suspensión, frenos, transmisión delantera.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- Botón flotante "+" -->
+  <button id="btnAgregar" class="btn-agregar">+</button>
+
+  <!-- Modal para agregar contenido con usuario, contraseña y categoría -->
+  <div id="modalAgregar" class="modal">
+    <div class="modal-content">
+      <span class="cerrar">&times;</span>
+      <h3>Agregar nuevo servicio</h3>
+
+      <input type="text" id="nombreUsuario" placeholder="Usuario"><br>
+      <input type="password" id="claveUsuario" placeholder="Contraseña"><br>
+      <select id="categoria">
+        <option value="servicios">Servicios</option>
+        <option value="disponibles">Servicios Disponibles</option>
+        <option value="autos">Autos Disponibles</option>
+      </select><br>
+
+      <input type="file" id="imagen" accept="image/*"><br>
+      <textarea id="descripcion" placeholder="Descripción del servicio" rows="4" cols="40"></textarea><br>
+      <button id="confirmarAgregar">Agregar</button>
+    </div>
+  </div>
+
+  <!-- Script funcional -->
+  <script>
+    const btnAgregar = document.getElementById("btnAgregar");
+    const modal = document.getElementById("modalAgregar");
+    const cerrar = document.querySelector(".cerrar");
+    const confirmarAgregar = document.getElementById("confirmarAgregar");
+
+    btnAgregar.onclick = () => { modal.style.display = "flex"; };
+    cerrar.onclick = () => { modal.style.display = "none"; };
+
+    confirmarAgregar.onclick = () => {
+      const usuario = document.getElementById("nombreUsuario").value;
+      const clave = document.getElementById("claveUsuario").value;
+      const categoria = document.getElementById("categoria").value;
+      const descripcion = document.getElementById("descripcion").value;
+      const imagenInput = document.getElementById("imagen");
+      const imagen = imagenInput.files[0];
+
+      if (usuario !== "dr.autos" || clave !== "soloyose012") {
+        alert("Usuario o contraseña incorrectos.");
+        return;
+      }
+
+      const nuevoDiv = document.createElement("div");
+      nuevoDiv.style.background = "rgba(255,255,255,0.1)";
+      nuevoDiv.style.padding = "15px";
+      nuevoDiv.style.borderRadius = "8px";
+      nuevoDiv.style.marginBottom = "20px";
+      nuevoDiv.style.color = "white";
+
+      function crearBotones(div) {
+        const btnEditar = document.createElement("button");
+        btnEditar.textContent = "Editar";
+        btnEditar.style.marginRight = "10px";
+        btnEditar.onclick = () => {
+          const nuevoTexto = prompt("Editar descripción:", div.querySelector("p")?.textContent || "");
+          if (nuevoTexto && div.querySelector("p")) div.querySelector("p").textContent = nuevoTexto;
+        };
+
+        const btnEliminar = document.createElement("button");
+        btnEliminar.textContent = "Eliminar";
+        btnEliminar.onclick = () => {
+          if (confirm("¿Seguro que quieres eliminar esto?")) div.remove();
+        };
+
+        const contenedorBotones = document.createElement("div");
+        contenedorBotones.appendChild(btnEditar);
+        contenedorBotones.appendChild(btnEliminar);
+        div.appendChild(contenedorBotones);
+      }
+
+      if (imagen) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          nuevoDiv.innerHTML = `<img src="${e.target.result}" style="max-width:100%; border-radius:8px; margin-bottom:10px;"><p>${descripcion}</p>`;
+          crearBotones(nuevoDiv);
+          agregarEnCategoria(categoria, nuevoDiv);
+        }
+        reader.readAsDataURL(imagen);
+      } else {
+        nuevoDiv.innerHTML = `<p>${descripcion}</p>`;
+        crearBotones(nuevoDiv);
+        agregarEnCategoria(categoria, nuevoDiv);
+      }
+
+      modal.style.display = "none";
+      document.getElementById("nombreUsuario").value = "";
+      document.getElementById("claveUsuario").value = "";
+      document.getElementById("descripcion").value = "";
+      document.getElementById("imagen").value = "";
+    };
+
+    function agregarEnCategoria(cat, div) {
+      if (cat === "servicios") {
+        document.querySelector(".servi")?.appendChild(div);
+      } else if (cat === "disponibles" || cat === "autos") {
+        document.querySelector(".disponible")?.appendChild(div);
+      }
+    }
+  </script>
+</body>
+</html>
